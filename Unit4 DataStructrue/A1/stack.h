@@ -23,13 +23,12 @@ typedef struct
 
 // APIs
 // 1. Create the stack & init it.
-Stack* Stack_dynamic_Create( unsigned int stack_capacity );
-Stack* Stack_static_Create( unsigned int stack_capacity );
-int Stack_IsFull( Stack* stack_Obj);
-int Stack_IsEmpty( Stack* stack_Obj);
-int Stack_push(Stack* stack_Obj,Stack_type item);
-Stack_type Stack_pop(Stack* stack_Obj);
-Stack_type Stack_peek(Stack* stack_Obj);
-void Stack_Status (Stack* stack_Obj);
+int Stack_Init( Stack* stack, Stack_type* ptr, unsigned int stack_capacity );
+int Stack_IsFull( Stack* stack);
+int Stack_IsEmpty( Stack* stack);
+int Stack_push(Stack* stack,Stack_type item);
+Stack_type Stack_pop(Stack* stack);
+Stack_type Stack_peek(Stack* stack);
+void Stack_Status (Stack* stack);
 
 #endif // STACK_H_
